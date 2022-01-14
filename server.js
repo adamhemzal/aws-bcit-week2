@@ -11,10 +11,10 @@ const upload = multer({ dest: "images/" });
 const app = express();
 
 // Serve static files from the images folder
-app.use("/images", express.static("images"));
+//app.use("/images", express.static("images"));
 
 // Serve static files from the build folder where is the React app
-//app.use(express.static(path.join(__dirname, "build")))
+app.use(express.static(path.join(__dirname, "build")));
 
 /**
  * Routes
